@@ -1,0 +1,77 @@
+## 5 Minute Node Crash Course
+
+// node filename.js -----> node app.js
+
+// npm init -y
+
+// node filename.js -----> node app.js
+
+for(var i = 0; i < 500; i++){
+    console.log("This is some code!");
+}
+
+for(var i = 0; i < 500; i++){
+    console.log("This is some code!");
+}
+
+console.log(5 + 5);
+
+### Introduction to NPM and Faker
+
+npm install faker
+
+### Note about connecting Node to MySQL
+
+var mysql = require('mysql');
+ 
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  database : 'join_us'
+});
+
+
+### 283. Connecting Node to MySQL
+
+CREATE DATABASE join_us;
+
+USE join_us;
+
+npm install mysql;
+
+// var q = 'SELECT 1 + 1 AS solution'; 
+
+// var q = 'SELECT CURDATE()'; 
+
+connection.query('SELECT 1 + 5', function (error, results, fields) {
+    if (error) throw error;
+    console.log(results);
+});
+
+connection.end();
+
+### 285. Creating Our Users Table
+
+source node_and_mysql/schema.sql;
+
+### 287. Selecting Using Node
+
+var q = 'SELECT * FROM users;';
+
+connection.query(q, function (error, results, fields) {
+    if (error) throw error;
+    console.log(results);
+});
+
+connection.end();
+
+var q = 'SELECT COUNT(*) FROM users;';
+
+connection.query(q, function (error, results, fields) {
+    if (error) throw error;
+    console.log(results);
+});
+
+connection.end();
+
+

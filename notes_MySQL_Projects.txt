@@ -1,0 +1,30 @@
+$ mkdir colecting_data
+$ cd colecting_data/
+$ touch app.js
+$ npm init
+$ npm install express --save
+$ npm install faker mysql --save
+$ npm install ejs --save 
+$ npm install body-barser --save
+$ mkdir views | rmdir views (to remove the forlder)
+$ cd views/
+$ touch home.ejs or cd. > home.ejs
+$ cd ..
+$ mkdir public
+$ cd ..
+#open a new terminal and start mysql
+
+#Create Database
+$ sudo service mysqld start
+$ mysql -uroot -p
+mysql> SHOW DATABASES;
+mysql> CREATE DATABASE imc_app;
+mysql> SHOW DATABASES;
+mysql> USE imc_app;
+mysql> SELECT database();
+mysql> SHOW TABLES;
+
+# Save data access in .env
+npm install --save dotenv
+
+
